@@ -8,7 +8,7 @@ import 'package:core/domain/entities/season.dart';
 import 'package:core/domain/entities/tv_series.dart';
 import 'package:core/domain/entities/tv_series_detail.dart';
 
-final tvSeriesModel = TvSeriesModel(
+const tvSeriesModel = TvSeriesModel(
   posterPath: '/voHUmluYmKyleFkTu3lOXQG702u.jpg',
   popularity: 227.486,
   id: 84958,
@@ -25,7 +25,7 @@ final tvSeriesModel = TvSeriesModel(
   originalName: 'Loki',
 );
 
-final tvSeries = TvSeries(
+const tvSeries = TvSeries(
   posterPath: '/voHUmluYmKyleFkTu3lOXQG702u.jpg',
   popularity: 227.486,
   id: 84958,
@@ -42,7 +42,7 @@ final tvSeries = TvSeries(
   originalName: 'Loki',
 );
 
-final tvSeriesResponse = TvSeriesDetailResponse(
+const tvSeriesResponse = TvSeriesDetailResponse(
   backdropPath: 'backdropPath',
   firstAirDate: '2023-12-12',
   genres: [GenreModel(id: 1, name: 'Action')],
@@ -78,7 +78,7 @@ final tvSeriesResponse = TvSeriesDetailResponse(
   voteCount: 1000,
 );
 
-final tvSeriesDetail = TvSeriesDetail(
+const tvSeriesDetail = TvSeriesDetail(
   backdropPath: 'backdropPath',
   firstAirDate: '2023-12-12',
   genres: [Genre(id: 1, name: 'Action')],
@@ -107,7 +107,7 @@ final tvSeriesDetail = TvSeriesDetail(
   voteCount: 1000,
 );
 
-final tvSeriesTable = TvSeriesTable(
+const tvSeriesTable = TvSeriesTable(
   id: 1,
   name: 'name',
   posterPath: 'posterPath',
@@ -121,7 +121,7 @@ final tvSeriesMap = {
   'name': 'name',
 };
 
-final watchlistTvSeries = TvSeries.watchlist(
+const watchlistTvSeries = TvSeries.watchlist(
   id: 1,
   name: 'name',
   posterPath: 'posterPath',

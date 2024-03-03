@@ -69,7 +69,7 @@ void main() {
     act: (bloc) => bloc.add(FetchNowPlayingMovies()),
     expect: () => [
       NowPlayingMoviesLoading(),
-      NowPlayingMoviesError('Server Failure'),
+      const NowPlayingMoviesError('Server Failure'),
     ],
     verify: (bloc) => verify(mockGetNowPlayingMovies.execute()),
   );

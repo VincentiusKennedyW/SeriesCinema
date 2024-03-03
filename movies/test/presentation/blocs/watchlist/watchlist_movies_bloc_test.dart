@@ -67,7 +67,7 @@ void main() {
     act: (bloc) => bloc.add(FetchWatchlistMovies()),
     expect: () => [
       WatchlistMoviesLoading(),
-      WatchlistMoviesError('Database Failure'),
+      const WatchlistMoviesError('Database Failure'),
     ],
     verify: (bloc) => verify(mockGetWatchlistMovies.execute()),
   );

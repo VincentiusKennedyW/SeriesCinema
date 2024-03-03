@@ -1,4 +1,4 @@
-import '../../../lib/domain/usecases/remove_watchlist_tv_series.dart';
+import 'package:tv_series/domain/usecases/remove_watchlist_tv_series.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -18,11 +18,11 @@ void main() {
   test('should remove watchlist tv series from repository', () async {
     // arrange
     when(mockTvSeriesRepository.removeWatchlist(tvSeriesDetail))
-        .thenAnswer((_) async => Right('Removed from watchlist'));
+        .thenAnswer((_) async => const Right('Removed from watchlist'));
     // act
     final result = await usecase.execute(tvSeriesDetail);
     // assert
     verify(mockTvSeriesRepository.removeWatchlist(tvSeriesDetail));
-    expect(result, Right('Removed from watchlist'));
+    expect(result, const Right('Removed from watchlist'));
   });
 }

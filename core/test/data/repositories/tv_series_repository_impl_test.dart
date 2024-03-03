@@ -219,7 +219,7 @@ void main() {
       final result = await repository.getTvSeriesDetail(tId);
       // assert
       verify(mockRemoteDataSource.getTvSeriesDetail(tId));
-      expect(result, equals(Right(tvSeriesDetail)));
+      expect(result, equals(const Right(tvSeriesDetail)));
     });
 
     test(

@@ -61,7 +61,7 @@ void main() {
             .thenAnswer((_) async => true);
         return watchlistStatusMovieBloc;
       },
-      act: (bloc) => bloc.add(AddWatchlistMovie(testMovieDetail)),
+      act: (bloc) => bloc.add(const AddWatchlistMovie(testMovieDetail)),
       expect: () => [
         const WatchlistStatusMovieState(
           isAddedToWatchlist: true,
@@ -84,7 +84,7 @@ void main() {
             .thenAnswer((_) async => false);
         return watchlistStatusMovieBloc;
       },
-      act: (bloc) => bloc.add(AddWatchlistMovie(testMovieDetail)),
+      act: (bloc) => bloc.add(const AddWatchlistMovie(testMovieDetail)),
       expect: () => [
         const WatchlistStatusMovieState(
           isAddedToWatchlist: false,
@@ -108,7 +108,7 @@ void main() {
             .thenAnswer((_) async => false);
         return watchlistStatusMovieBloc;
       },
-      act: (bloc) => bloc.add(RemoveFromWatchlistMovie(testMovieDetail)),
+      act: (bloc) => bloc.add(const RemoveFromWatchlistMovie(testMovieDetail)),
       expect: () => [
         const WatchlistStatusMovieState(
           isAddedToWatchlist: false,
@@ -131,7 +131,7 @@ void main() {
             .thenAnswer((_) async => true);
         return watchlistStatusMovieBloc;
       },
-      act: (bloc) => bloc.add(RemoveFromWatchlistMovie(testMovieDetail)),
+      act: (bloc) => bloc.add(const RemoveFromWatchlistMovie(testMovieDetail)),
       expect: () => [
         const WatchlistStatusMovieState(
           isAddedToWatchlist: true,

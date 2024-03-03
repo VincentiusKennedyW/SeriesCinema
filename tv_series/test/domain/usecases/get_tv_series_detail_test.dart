@@ -1,4 +1,4 @@
-import '../../../lib/domain/usecases/get_tv_series_detail.dart';
+import 'package:tv_series/domain/usecases/get_tv_series_detail.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -15,15 +15,15 @@ void main() {
     usecase = GetTvSeriesDetail(mockTvSeriesRepository);
   });
 
-  final tId = 84958;
+  const tId = 84958;
 
   test('should get tv series detail from the repository', () async {
     // arrange
     when(mockTvSeriesRepository.getTvSeriesDetail(tId))
-        .thenAnswer((_) async => Right(tvSeriesDetail));
+        .thenAnswer((_) async => const Right(tvSeriesDetail));
     // act
     final result = await usecase.execute(tId);
     // assert
-    expect(result, Right(tvSeriesDetail));
+    expect(result, const Right(tvSeriesDetail));
   });
 }

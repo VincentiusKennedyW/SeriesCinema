@@ -89,7 +89,7 @@ void main() {
   testWidgets('Page should display text with message when Error',
       (WidgetTester tester) async {
     when(() => mockSearchMoviesBloc.state)
-        .thenReturn(SearchMovieError('Error message'));
+        .thenReturn(const SearchMovieError('Error message'));
 
     final textFinder = find.byKey(const Key('error_message'));
 

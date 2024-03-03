@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../json_reader.dart';
 
 void main() {
-  final tTvSeriesModel = TvSeriesModel(
+  const tTvSeriesModel = TvSeriesModel(
     posterPath: '/path.jpg',
     popularity: 3.4,
     id: 1,
@@ -14,15 +14,15 @@ void main() {
     voteAverage: 9.0,
     overview: 'Overview',
     firstAirDate: "2023-12-12",
-    originCountry: const ['en', 'id'],
-    genreIds: const [1, 2, 3],
+    originCountry: ['en', 'id'],
+    genreIds: [1, 2, 3],
     originalLanguage: 'Original Language',
     voteCount: 160,
     name: 'Name',
     originalName: 'Original Name',
   );
 
-  final tTvSeriesResponseModel =
+  const tTvSeriesResponseModel =
       TvSeriesResponse(tvSeriesList: <TvSeriesModel>[tTvSeriesModel]);
 
   group('fromJson', () {

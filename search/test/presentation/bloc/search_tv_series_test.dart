@@ -23,13 +23,13 @@ void main() {
     expect(searchTvSeriesBloc.state, SearchTvSeriesEmpty());
   });
 
-  final tTvSeriesModel = TvSeries(
+  const tTvSeriesModel = TvSeries(
     name: 'Loki',
     originalName: 'Loki',
-    originCountry: const ['US'],
+    originCountry: ['US'],
     originalLanguage: 'EN',
     backdropPath: '/muth4OYamXf41G2evdrLEg8d3om.jpg',
-    genreIds: const [14, 28],
+    genreIds: [14, 28],
     id: 557,
     overview:
         'After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers to become the Amazing superhero known as Spider-Man.',
@@ -50,7 +50,7 @@ void main() {
           .thenAnswer((_) async => Right(tTvSeriesList));
       return searchTvSeriesBloc;
     },
-    act: (bloc) => bloc.add(OnQueryChanged(tQuery)),
+    act: (bloc) => bloc.add(const OnQueryChanged(tQuery)),
     wait: const Duration(milliseconds: 500),
     expect: () => [
       SearchTvSeriesLoading(),
@@ -64,11 +64,11 @@ void main() {
   blocTest<SearchTvSeriesBloc, SearchTvSeriesState>(
     'Should emit [Loading, Error] when get search is unsuccessful',
     build: () {
-      when(mockSearchTvSeries.execute(tQuery)).thenAnswer(
-          (_) async => const Left(const ServerFailure('Server Failure')));
+      when(mockSearchTvSeries.execute(tQuery))
+          .thenAnswer((_) async => const Left(ServerFailure('Server Failure')));
       return searchTvSeriesBloc;
     },
-    act: (bloc) => bloc.add(OnQueryChanged(tQuery)),
+    act: (bloc) => bloc.add(const OnQueryChanged(tQuery)),
     wait: const Duration(milliseconds: 500),
     expect: () => [
       SearchTvSeriesLoading(),

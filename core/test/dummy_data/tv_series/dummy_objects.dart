@@ -8,7 +8,7 @@ import 'package:core/domain/entities/season.dart';
 import 'package:core/domain/entities/tv_series.dart';
 import 'package:core/domain/entities/tv_series_detail.dart';
 
-final tvSeriesModel = TvSeriesModel(
+const tvSeriesModel = TvSeriesModel(
   posterPath: '/voHUmluYmKyleFkTu3lOXQG702u.jpg',
   popularity: 227.486,
   id: 84958,
@@ -17,15 +17,15 @@ final tvSeriesModel = TvSeriesModel(
   overview:
       'After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.',
   firstAirDate: '2021-06-09',
-  originCountry: const ['US'],
-  genreIds: const [18, 10765],
+  originCountry: ['US'],
+  genreIds: [18, 10765],
   originalLanguage: 'en',
   voteCount: 11124,
   name: 'Loki',
   originalName: 'Loki',
 );
 
-final tvSeries = TvSeries(
+const tvSeries = TvSeries(
   posterPath: '/voHUmluYmKyleFkTu3lOXQG702u.jpg',
   popularity: 227.486,
   id: 84958,
@@ -34,27 +34,27 @@ final tvSeries = TvSeries(
   overview:
       'After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.',
   firstAirDate: '2021-06-09',
-  originCountry: const ['US'],
-  genreIds: const [18, 10765],
+  originCountry: ['US'],
+  genreIds: [18, 10765],
   originalLanguage: 'en',
   voteCount: 11124,
   name: 'Loki',
   originalName: 'Loki',
 );
 
-final tvSeriesResponse = TvSeriesDetailResponse(
+const tvSeriesResponse = TvSeriesDetailResponse(
   backdropPath: 'backdropPath',
   firstAirDate: '2023-12-12',
   genres: [GenreModel(id: 1, name: 'Action')],
   homepage: 'https://google.com',
   id: 1,
   inProduction: false,
-  languages: const ['en'],
+  languages: ['en'],
   lastAirDate: '2024-01-01',
   name: 'name',
   numberOfEpisodes: 12,
   numberOfSeasons: 3,
-  originCountry: const ['US'],
+  originCountry: ['US'],
   originalLanguage: 'originalLanguage',
   originalName: 'originalName',
   overview: 'overview',
@@ -78,7 +78,7 @@ final tvSeriesResponse = TvSeriesDetailResponse(
   voteCount: 1000,
 );
 
-final tvSeriesDetail = TvSeriesDetail(
+const tvSeriesDetail = TvSeriesDetail(
   backdropPath: 'backdropPath',
   firstAirDate: '2023-12-12',
   genres: [Genre(id: 1, name: 'Action')],
@@ -107,7 +107,7 @@ final tvSeriesDetail = TvSeriesDetail(
   voteCount: 1000,
 );
 
-final tvSeriesTable = TvSeriesTable(
+const tvSeriesTable = TvSeriesTable(
   id: 1,
   name: 'name',
   posterPath: 'posterPath',
@@ -121,7 +121,7 @@ final tvSeriesMap = {
   'name': 'name',
 };
 
-final watchlistTvSeries = TvSeries.watchlist(
+const watchlistTvSeries = TvSeries.watchlist(
   id: 1,
   name: 'name',
   posterPath: 'posterPath',

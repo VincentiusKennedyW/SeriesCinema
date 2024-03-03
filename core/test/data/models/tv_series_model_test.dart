@@ -3,7 +3,7 @@ import 'package:core/domain/entities/tv_series.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  final tTvSeriesModel = TvSeriesModel(
+  const tTvSeriesModel = TvSeriesModel(
     posterPath: 'posterPath',
     popularity: 5.4,
     id: 1,
@@ -11,15 +11,15 @@ void main() {
     voteAverage: 9.4,
     overview: 'overview',
     firstAirDate: 'firstAirDate',
-    originCountry: const ['en', 'id'],
-    genreIds: const [1, 2, 3],
+    originCountry: ['en', 'id'],
+    genreIds: [1, 2, 3],
     originalLanguage: 'originalLanguage',
     voteCount: 123,
     name: 'name',
     originalName: 'originalName',
   );
 
-  final tTvSeries = TvSeries(
+  const tTvSeries = TvSeries(
     posterPath: 'posterPath',
     popularity: 5.4,
     id: 1,
@@ -27,8 +27,8 @@ void main() {
     voteAverage: 9.4,
     overview: 'overview',
     firstAirDate: 'firstAirDate',
-    originCountry: const ['en', 'id'],
-    genreIds: const [1, 2, 3],
+    originCountry: ['en', 'id'],
+    genreIds: [1, 2, 3],
     originalLanguage: 'originalLanguage',
     voteCount: 123,
     name: 'name',

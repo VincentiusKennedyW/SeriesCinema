@@ -69,7 +69,7 @@ void main() {
     act: (bloc) => bloc.add(FetchTopRatedMovies()),
     expect: () => [
       TopRatedMoviesLoading(),
-      TopRatedMoviesError('Server Failure'),
+      const TopRatedMoviesError('Server Failure'),
     ],
     verify: (bloc) => verify(mockGetTopRatedMovies.execute()),
   );

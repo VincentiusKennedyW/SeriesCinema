@@ -82,9 +82,9 @@ void main() {
       'Watchlist button should display add icon when tv series not added to watchlist',
       (WidgetTester tester) async {
     when(() => mockDetailTvSeriesBloc.state)
-        .thenReturn(DetailTvSeriesHasData(tvSeriesDetail));
+        .thenReturn(const DetailTvSeriesHasData(tvSeriesDetail));
     when(() => mockRecommendationTvSeriesBloc.state)
-        .thenReturn(RecommendationTvSeriesHasData([tvSeries]));
+        .thenReturn(const RecommendationTvSeriesHasData([tvSeries]));
     when(() => mockWatchlistStatusTvSeriesBloc.state).thenReturn(
         const WatchlistStatusTvSeriesState(
             isAddedToWatchlist: false, message: ''));
@@ -101,9 +101,9 @@ void main() {
       'Watchlist button should dispay check icon when tv series is added to wathclist',
       (WidgetTester tester) async {
     when(() => mockDetailTvSeriesBloc.state)
-        .thenReturn(DetailTvSeriesHasData(tvSeriesDetail));
+        .thenReturn(const DetailTvSeriesHasData(tvSeriesDetail));
     when(() => mockRecommendationTvSeriesBloc.state)
-        .thenReturn(RecommendationTvSeriesHasData([tvSeries]));
+        .thenReturn(const RecommendationTvSeriesHasData([tvSeries]));
     when(() => mockWatchlistStatusTvSeriesBloc.state).thenReturn(
         const WatchlistStatusTvSeriesState(
             isAddedToWatchlist: true, message: ''));
@@ -120,9 +120,9 @@ void main() {
       'Watchlist button should display Snackbar when added to watchlist',
       (WidgetTester tester) async {
     when(() => mockDetailTvSeriesBloc.state)
-        .thenReturn(DetailTvSeriesHasData(tvSeriesDetail));
+        .thenReturn(const DetailTvSeriesHasData(tvSeriesDetail));
     when(() => mockRecommendationTvSeriesBloc.state)
-        .thenReturn(RecommendationTvSeriesHasData([tvSeries]));
+        .thenReturn(const RecommendationTvSeriesHasData([tvSeries]));
 
     whenListen(
       mockWatchlistStatusTvSeriesBloc,
@@ -162,9 +162,9 @@ void main() {
       'Watchlist button should display Snackbar when removed from watchlist',
       (WidgetTester tester) async {
     when(() => mockDetailTvSeriesBloc.state)
-        .thenReturn(DetailTvSeriesHasData(tvSeriesDetail));
+        .thenReturn(const DetailTvSeriesHasData(tvSeriesDetail));
     when(() => mockRecommendationTvSeriesBloc.state)
-        .thenReturn(RecommendationTvSeriesHasData([tvSeries]));
+        .thenReturn(const RecommendationTvSeriesHasData([tvSeries]));
 
     whenListen(
       mockWatchlistStatusTvSeriesBloc,
@@ -204,9 +204,9 @@ void main() {
       'Watchlist button should display AlertDialog when add to watchlist failed',
       (WidgetTester tester) async {
     when(() => mockDetailTvSeriesBloc.state)
-        .thenReturn(DetailTvSeriesHasData(tvSeriesDetail));
+        .thenReturn(const DetailTvSeriesHasData(tvSeriesDetail));
     when(() => mockRecommendationTvSeriesBloc.state)
-        .thenReturn(RecommendationTvSeriesHasData([tvSeries]));
+        .thenReturn(const RecommendationTvSeriesHasData([tvSeries]));
 
     whenListen(
       mockWatchlistStatusTvSeriesBloc,
@@ -257,7 +257,7 @@ void main() {
     'Recommendations TV Series should display text when data is empty',
     (WidgetTester tester) async {
       when(() => mockDetailTvSeriesBloc.state)
-          .thenReturn(DetailTvSeriesHasData(tvSeriesDetail));
+          .thenReturn(const DetailTvSeriesHasData(tvSeriesDetail));
       when(() => mockRecommendationTvSeriesBloc.state)
           .thenReturn(RecommendationTvSeriesEmpty());
       when(() => mockWatchlistStatusTvSeriesBloc.state).thenReturn(
@@ -280,7 +280,7 @@ void main() {
       'Recommendations TV Series should display message error when error',
       (WidgetTester tester) async {
     when(() => mockDetailTvSeriesBloc.state)
-        .thenReturn(DetailTvSeriesHasData(tvSeriesDetail));
+        .thenReturn(const DetailTvSeriesHasData(tvSeriesDetail));
     when(() => mockRecommendationTvSeriesBloc.state)
         .thenReturn(const RecommendationTvSeriesError('Error'));
     when(() => mockWatchlistStatusTvSeriesBloc.state).thenReturn(

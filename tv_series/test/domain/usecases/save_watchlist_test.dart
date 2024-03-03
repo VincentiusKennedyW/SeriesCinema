@@ -1,4 +1,4 @@
-import '../../../lib/domain/usecases/save_watchlist_tv_series.dart';
+import 'package:tv_series/domain/usecases/save_watchlist_tv_series.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -18,11 +18,11 @@ void main() {
   test('should save tv series to the repository', () async {
     // arrange
     when(mockTvSeriesRepository.saveWatchlist(tvSeriesDetail))
-        .thenAnswer((_) async => Right('Added to Watchlist'));
+        .thenAnswer((_) async => const Right('Added to Watchlist'));
     // act
     final result = await usecase.execute(tvSeriesDetail);
     // assert
     verify(mockTvSeriesRepository.saveWatchlist(tvSeriesDetail));
-    expect(result, Right('Added to Watchlist'));
+    expect(result, const Right('Added to Watchlist'));
   });
 }

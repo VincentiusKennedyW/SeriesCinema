@@ -30,13 +30,13 @@ void main() {
     'Should emit [Loading, HasData] when data is gotten successfully',
     build: () {
       when(mockGetDetailTvSeries.execute(tId))
-          .thenAnswer((_) async => Right(tvSeriesDetail));
+          .thenAnswer((_) async => const Right(tvSeriesDetail));
       return detailTvSeriesBloc;
     },
     act: (bloc) => bloc.add(const FetchDetailTvSeries(tId)),
     expect: () => [
       DetailTvSeriesLoading(),
-      DetailTvSeriesHasData(tvSeriesDetail),
+      const DetailTvSeriesHasData(tvSeriesDetail),
     ],
     verify: (bloc) => verify(mockGetDetailTvSeries.execute(tId)),
   );
